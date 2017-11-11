@@ -259,7 +259,7 @@ ip tuntap add tun100 mode tun
 
 tinyFecVPN是一个极轻量的VPN，比l2tp还轻量，只自带了简单的xor加密。如果你需要AES加密，可以在前面串个udp2raw，这样同时还能获得防重放攻击的能力。
 
-### 如何测网络本身的丢包率
+### 如何测试网络本身的丢包率
 
 比如你配置好了tinyFecVPN，但是不知道网络本身的丢包情况。你可以在两边为tinyFecVPN加上`--disable-fec`选项，这样FEC就被关闭了。透过这条VPN连接来ping，就可以测出网络本身的丢包率。
 
