@@ -191,8 +191,6 @@ iperf3 -c 10.22.22.1 -P10
 
 # 使用经验
 
-见：
-
 https://github.com/wangyu-/tinyFecVPN/wiki/使用经验
 
 # 限制
