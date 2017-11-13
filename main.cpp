@@ -6,6 +6,7 @@
  */
 
 #include "common.h"
+#include "tunnel.h"
 #include "log.h"
 #include "misc.h"
 #include "tun_dev.h"
@@ -124,10 +125,12 @@ int main(int argc, char *argv[])
 	if(client_or_server==client_mode)
 	{
 		tun_dev_client_event_loop();
+		do_keep_alive(&local_ip_uint32);
 	}
 	else
 	{
 		tun_dev_server_event_loop();
+		tunnel_server_event_loop();
 	}
 
 	return 0;
