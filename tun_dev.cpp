@@ -7,6 +7,7 @@
 
 
 #include "common.h"
+#include "tunnel.h"
 #include "log.h"
 #include "misc.h"
 
@@ -40,6 +41,7 @@ int get_tun_fd(char * dev_name)
 		mylog(log_fatal,"open /dev/net/tun failed");
 		myexit(-1);
 	}
+	tunnel_client_event_loop();
 	return tun_fd;
 }
 
